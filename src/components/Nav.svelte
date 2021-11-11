@@ -21,6 +21,9 @@
 </nav>
 
 <style type="text/scss">
+
+  @import '../styles/components/burguer.scss';
+
   $nav-height: 70px;
   
   :global(body) {
@@ -42,8 +45,6 @@
       margin: 0 80px 0 1rem;
     }
     
-    @import '../styles/components/burguer.scss';
-
     .menu {
       bottom: 0;
       background: #fff;
