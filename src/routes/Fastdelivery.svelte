@@ -1,18 +1,19 @@
 <script>
-	import {getDatabase} from '../notion'
-  let data = []
-
-  async function getList(){
-    let list = await getDatabase()
-    data = list
-  }
+  import { apiData } from "../stores/notion";
 
 </script>
+
 <h3>Fast Delivery page</h3>
-<button on:click="{()=> getList()}">Obter Lista</button>
+<ul class="list">
+  {#each $apiData as item}
+    <li class="item">
+      <p>{item.linha}</p>
+      <p>{item.nome}</p>
+      <p>{item.preco}</p>
+      <p>{item.aplicacao}</p>
+    </li>
+  {/each}
+</ul>
 
-{#each data as item}
-
-  <li>{item}hahah</li>
-
-{/each}
+<style type="text/scss">
+</style>

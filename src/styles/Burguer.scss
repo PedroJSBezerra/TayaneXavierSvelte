@@ -1,7 +1,5 @@
-button {
-  // z-index: 999;
-  // position: absolute;
-  background: rgba(255,255,255,.0);
+.burguer {
+  background: rgba(255, 255, 255, 0);
   border: none;
   cursor: pointer;
   display: flex;
@@ -9,23 +7,24 @@ button {
   height: 50px;
   justify-content: center;
   align-items: center;
-  transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
   span{
     display: block;
     position: absolute;
     width: 30px;
     height: 3px;
-    background: #333;
+    background: #fff;
     border-radius: 2px;
     transition: all .3s ease-in-out; 
 
-    &:before {
+    &:first-child {
       content: '';
       transform: translateY(-8px);
       @extend span;
     }
-    &:after {
+
+    &:last-child {
       content: '';
       transform: translateY(8px);
       @extend span;
