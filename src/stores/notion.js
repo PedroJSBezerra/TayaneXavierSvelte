@@ -1,14 +1,13 @@
 import {writable} from 'svelte/store'
 
 export const apiData = writable([])
-
-let url = "https://tayanexavier.herokuapp.com/list";
+let herokuUrl = "https://tayanexavier.herokuapp.com/list"
+let localUrl = "http://localhost:8080/list";
 
 async function getList() {
-  fetch(url)
+  fetch(herokuUrl)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data[0]);
       apiData.set(data);
     })
     .catch((err) => {

@@ -7,8 +7,8 @@ body {
   margin: 0;
   font-family: Quicksand-Regular, sans-serif;
   background: linear-gradient(162.44deg, #CC10A3 15.6%, #6E10CC 100%);
-  height: 100vh;
   width: 100%;
+  background-repeat: no-repeat;
 }
 
 @font-face {
